@@ -109,7 +109,7 @@ module Jasmine
       example_name = spec["name"]
       @spec_ids << spec["id"]
       backtrace = @example_locations[parent.description + " " + example_name]
-      parent.it example_name, {}, backtrace do
+      parent.it example_name, {} do
         me.report_spec(spec["id"])
       end
     end
